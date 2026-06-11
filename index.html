@@ -1,0 +1,518 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;BANKAKU Singapore | 坂角総本舗&lt;/title&gt;</p>
+<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&amp;family=Noto+Sans+JP:wght@300;400&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--coral: #E05A4E;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--dark: #2a2a2a;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--charcoal: #3a3736;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--light: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--offwhite: #fafaf8;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--gold: #c8a96a;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--text: #333;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--muted: #888;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); background: var(--light); font-weight: 300; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* BANNER */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.banner { background: var(--dark); color: #ccc; text-align: center; font-size: 12px; padding: 8px 16px; letter-spacing: 0.08em; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* HEADER */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>header { background: var(--light); border-bottom: 1px solid #eee; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; flex-shrink: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hamburger span { display: block; width: 22px; height: 2px; background: var(--coral); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* LOGO — real image based */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.logo-wrap { display: flex; align-items: center; gap: 10px; text-decoration: none; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.logo-img { height: 52px; width: auto; display: block; object-fit: contain; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.logo-text { display: flex; flex-direction: column; line-height: 1.3; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.logo-text .brand-en { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: var(--dark); letter-spacing: 0.08em; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.logo-text .brand-ja { font-family: 'Noto Serif JP', serif; font-size: 9px; color: var(--muted); letter-spacing: 0.1em; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.logo-text .brand-sub { font-size: 9px; color: var(--muted); letter-spacing: 0.12em; font-family: 'Cormorant Garamond', serif; text-transform: uppercase; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.header-right { width: 30px; flex-shrink: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* NAV */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>nav.mobile-nav { display: none; background: var(--offwhite); border-bottom: 1px solid #eee; padding: 0 24px; flex-direction: column; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>nav.mobile-nav a { color: var(--text); text-decoration: none; font-size: 14px; letter-spacing: 0.05em; padding: 14px 0; border-bottom: 1px solid #eee; display: block; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>nav.mobile-nav a:last-child { border-bottom: none; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* HERO */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-fallback { background: linear-gradient(135deg, #1a2a3a 0%, #2d3a2e 100%); padding: 64px 32px; text-align: center; color: white; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-fallback .ja { font-family: 'Noto Serif JP', serif; font-size: 12px; letter-spacing: 0.3em; color: var(--gold); margin-bottom: 8px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-fallback h1 { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; line-height: 1.3; margin-bottom: 16px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-fallback p { font-size: 13px; line-height: 1.9; color: rgba(255,255,255,0.75); max-width: 320px; margin: 0 auto 28px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-fallback .btn-outline { display: inline-block; border: 1px solid rgba(255,255,255,0.5); color: white; padding: 10px 28px; font-size: 12px; letter-spacing: 0.15em; text-decoration: none; transition: all 0.3s; text-transform: uppercase; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-fallback .btn-outline:hover { background: white; color: var(--dark); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.dots { display: flex; justify-content: center; gap: 8px; padding: 14px 0; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.dot { width: 8px; height: 8px; border-radius: 50%; background: #ddd; border: none; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.dot.active { background: var(--coral); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* SECTION TITLE */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.section-title { text-align: center; padding: 40px 24px 24px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.section-title h2 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 400; letter-spacing: 0.1em; color: var(--dark); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.section-title .ja { font-family: 'Noto Serif JP', serif; font-size: 12px; letter-spacing: 0.3em; color: var(--muted); margin-top: 5px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.divider { width: 32px; height: 1px; background: var(--coral); margin: 10px auto 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* PRODUCT CATEGORIES GRID */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.cat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin-bottom: 3px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.product-cell { position: relative; overflow: hidden; cursor: pointer; display: block; text-decoration: none; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.product-cell-placeholder { width: 100%; height: 185px; display: flex; align-items: center; justify-content: center; font-size: 52px; transition: transform 0.4s; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.product-cell:hover .product-cell-placeholder { transform: scale(1.05); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* IMAGE slot for when real photos are added */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.product-cell .cell-img { width: 100%; height: 185px; object-fit: cover; display: block; transition: transform 0.4s; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.product-cell:hover .cell-img { transform: scale(1.05); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.product-cell-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.72), transparent); color: white; padding: 32px 14px 14px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.product-cell-label .en-name { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 400; display: block; margin-bottom: 2px; letter-spacing: 0.05em; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.product-cell-label .ja-name { font-family: 'Noto Serif JP', serif; font-size: 10px; letter-spacing: 0.12em; color: rgba(255,255,255,0.72); display: block; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.seasonal-badge { position: absolute; top: 12px; right: 12px; background: var(--gold); color: white; font-size: 9px; letter-spacing: 0.1em; padding: 3px 10px; text-transform: uppercase; font-family: 'Cormorant Garamond', serif; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* PRODUCT DETAIL CARDS */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.product-cards { padding: 0 20px 36px; display: flex; flex-direction: column; gap: 28px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pcard { background: var(--offwhite); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pcard-img { width: 100%; height: 210px; display: flex; align-items: center; justify-content: center; font-size: 52px; position: relative; overflow: hidden; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pcard-img img { width: 100%; height: 100%; object-fit: cover; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pcard-img .img-placeholder-label { position: absolute; bottom: 8px; right: 10px; font-size: 10px; color: rgba(255,255,255,0.6); background: rgba(0,0,0,0.3); padding: 2px 8px; border-radius: 2px; letter-spacing: 0.05em; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pcard-body { padding: 20px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pcard-body .tag { display: inline-block; background: var(--coral); color: white; font-size: 10px; letter-spacing: 0.1em; padding: 3px 10px; margin-bottom: 10px; text-transform: uppercase; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pcard-body .tag.gold { background: var(--gold); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pcard-body .tag.seasonal-tag { background: #6a4c8a; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pcard-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; line-height: 1.4; margin-bottom: 4px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pcard-body .h3-ja { font-family: 'Noto Serif JP', serif; font-size: 12px; color: var(--muted); margin-bottom: 10px; letter-spacing: 0.1em; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pcard-body p { font-size: 12px; line-height: 1.9; color: #666; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pcard-body .see-more { display: inline-block; margin-top: 12px; font-size: 11px; color: var(--coral); letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--coral); padding-bottom: 1px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* SEASONAL NOTICE */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.seasonal-notice { margin: 0 20px 28px; border: 1px solid var(--gold); padding: 20px; text-align: center; background: #fffdf7; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.seasonal-notice .sn-icon { font-size: 26px; margin-bottom: 8px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.seasonal-notice h4 { font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #7a5c1e; margin-bottom: 6px; letter-spacing: 0.05em; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.seasonal-notice p { font-size: 12px; color: #888; line-height: 1.9; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* SHOP ONLINE */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.shop-section { background: var(--offwhite); padding: 8px 24px 36px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.shop-intro { font-size: 13px; color: #555; line-height: 1.9; text-align: center; margin-bottom: 20px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.shop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.shop-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; background: white; border: 1px solid #ddd; padding: 16px 10px; text-decoration: none; color: var(--dark); text-align: center; transition: border-color 0.3s, box-shadow 0.3s; gap: 5px; position: relative; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.shop-btn:hover { border-color: var(--coral); box-shadow: 0 2px 8px rgba(224,90,78,0.1); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.shop-btn .shop-icon { font-size: 22px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.shop-btn .shop-name { font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 600; color: var(--dark); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.shop-btn .shop-label { font-size: 10px; color: var(--muted); letter-spacing: 0.05em; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.shop-btn.priority { border-color: var(--coral); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.shop-btn.priority::before { content: '★ Recommended'; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--coral); color: white; font-size: 9px; padding: 2px 8px; letter-spacing: 0.06em; white-space: nowrap; font-family: 'Cormorant Garamond', serif; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ABOUT */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.about-section { background: var(--charcoal); color: white; padding: 52px 28px; text-align: center; position: relative; overflow: hidden; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.about-section::before { content: '坂角'; position: absolute; top: -20px; left: -10px; font-family: 'Noto Serif JP', serif; font-size: 120px; opacity: 0.04; color: white; line-height: 1; pointer-events: none; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.about-section .en-heading { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; line-height: 1.4; margin-bottom: 6px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.about-section .ja-heading { font-family: 'Noto Serif JP', serif; font-size: 11px; letter-spacing: 0.25em; color: var(--gold); margin-bottom: 22px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.about-section p { font-size: 13px; line-height: 2.1; color: rgba(255,255,255,0.75); max-width: 340px; margin: 0 auto 28px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.gold-line { width: 40px; height: 1px; background: var(--gold); margin: 0 auto 22px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.year-badge { display: inline-block; border: 1px solid var(--gold); color: var(--gold); padding: 6px 20px; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.2em; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* WHERE TO FIND */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.where-section { padding: 8px 24px 32px; background: var(--offwhite); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.store-card { background: white; border: 1px solid #eee; padding: 20px; margin-bottom: 14px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.store-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; margin-bottom: 12px; color: var(--dark); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.info-row { display: flex; gap: 10px; align-items: flex-start; font-size: 12px; line-height: 1.7; color: #555; margin-bottom: 8px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.info-icon { color: var(--coral); font-size: 14px; flex-shrink: 0; margin-top: 1px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* CONTACT */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.contact-section { padding: 40px 24px; background: white; text-align: center; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.contact-details { font-size: 13px; line-height: 2.4; color: #555; margin-bottom: 24px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.contact-details a { color: var(--coral); text-decoration: none; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.contact-btns { display: flex; flex-direction: column; gap: 12px; align-items: center; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.contact-btn { display: inline-block; background: var(--coral); color: white; padding: 12px 36px; font-size: 12px; letter-spacing: 0.15em; text-decoration: none; text-transform: uppercase; transition: opacity 0.3s; min-width: 220px; text-align: center; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.contact-btn.whatsapp { background: #25d366; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.contact-btn:hover { opacity: 0.85; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* FOOTER */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>footer { background: var(--dark); color: #aaa; padding: 36px 24px 20px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.footer-brand { margin-bottom: 24px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.footer-brand img { height: 44px; width: auto; display: block; margin-bottom: 6px; filter: brightness(0) invert(0.7); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.footer-brand-name { font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #ddd; letter-spacing: 0.08em; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.footer-brand-sub { font-size: 11px; color: #666; letter-spacing: 0.05em; margin-top: 2px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.footer-sections { display: flex; flex-direction: column; gap: 20px; margin-bottom: 24px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.footer-col h5 { font-size: 10px; letter-spacing: 0.2em; color: #666; text-transform: uppercase; margin-bottom: 10px; font-family: 'Cormorant Garamond', serif; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.footer-col a { display: block; color: #888; text-decoration: none; font-size: 12px; margin-bottom: 7px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.footer-col a:hover { color: #ddd; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.social-row { display: flex; gap: 14px; margin-bottom: 28px; align-items: center; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.social-btn { width: 38px; height: 38px; border: 1px solid #555; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #888; text-decoration: none; font-size: 14px; transition: all 0.3s; font-weight: bold; font-family: serif; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.social-btn:hover { border-color: #aaa; color: #ddd; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.copyright { font-size: 10px; color: #555; border-top: 1px solid #3a3a3a; padding-top: 16px; letter-spacing: 0.04em; line-height: 1.8; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.back-top { position: fixed; bottom: 20px; right: 20px; width: 40px; height: 40px; background: white; border: 1px solid #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 16px; color: var(--dark); box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-decoration: none; transition: box-shadow 0.3s; z-index: 50; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.back-top:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.15); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>@media (min-width: 600px) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-fallback h1 { font-size: 44px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.product-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.shop-grid { grid-template-columns: repeat(4, 1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.footer-sections { flex-direction: row; gap: 40px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contact-btns { flex-direction: row; justify-content: center; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- BANNER --&gt;</p>
+<p class="p1">&lt;div class="banner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>Now in Singapore &amp;nbsp;·&amp;nbsp; Authentic Japanese prawn crackers from Nagoya &amp;nbsp;·&amp;nbsp; Est. 1889</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- HEADER --&gt;</p>
+<p class="p1">&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="hamburger" onclick="toggleMenu()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a class="logo-wrap" href="#"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img class="logo-img" src="data:image/jpeg" alt="Bankaku crest"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="logo-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="brand-en"&gt;BANKAKU&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="brand-ja"&gt;坂角総本舗&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="brand-sub"&gt;Singapore&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="header-right"&gt;&lt;/div&gt;</p>
+<p class="p1">&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- MOBILE NAV --&gt;</p>
+<p class="p1">&lt;nav class="mobile-nav" id="mobileNav"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="#products" onclick="closeMenu()"&gt;Our Products&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="#shop-online" onclick="closeMenu()"&gt;Shop Online&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="#about" onclick="closeMenu()"&gt;About Bankaku&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="#where" onclick="closeMenu()"&gt;Where to Find Us&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="#contact" onclick="closeMenu()"&gt;Contact Us&lt;/a&gt;</p>
+<p class="p1">&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- HERO --&gt;</p>
+<p class="p1">&lt;div class="hero-fallback"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="ja"&gt;坂角総本舗 · 公式 · Singapore&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;Japan's Finest&lt;br&gt;Prawn Crackers,&lt;br&gt;Now in Singapore&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Every bite of 〈YUKARI〉 carries over 130 years of craftsmanship —</p>
+<p class="p1"><span class="Apple-converted-space">    </span>made with approximately 70% natural prawn,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>perfected since the Edo era.</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="#products" class="btn-outline"&gt;Discover Our Products&lt;/a&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;div class="dots"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="dot active"&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="dot"&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="dot"&gt;&lt;/button&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- PRODUCT CATEGORIES --&gt;</p>
+<p class="p1">&lt;div id="products" class="section-title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;Product Categories&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="ja"&gt;商 品 類 別&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="cat-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a class="product-cell" href="#yukari"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="product-cell-placeholder" style="background: linear-gradient(135deg, #d4a96a, #8b6020);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Replace with: &lt;img class="cell-img" src="your-yukari-photo.jpg" alt="Yukari"&gt; --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>🍤</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="product-cell-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="en-name"&gt;Yukari&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="ja-name"&gt;ゆかり&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a class="product-cell" href="#sakusaku"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="product-cell-placeholder" style="background: linear-gradient(135deg, #e8d5c0, #c49a70);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>🍪</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="product-cell-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="en-name"&gt;Saku Saku Nikki&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="ja-name"&gt;さくさく日記&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a class="product-cell" href="#yaraku"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="product-cell-placeholder" style="background: linear-gradient(135deg, #1a2a3a, #2d5a8a);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>🎴</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="product-cell-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="en-name"&gt;Yaraku&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="ja-name"&gt;八樂&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a class="product-cell" href="#seasonal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="product-cell-placeholder" style="background: linear-gradient(135deg, #6a4c8a, #9b6abf);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>🎁</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="seasonal-badge"&gt;Limited&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="product-cell-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="en-name"&gt;Seasonal Specials&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="ja-name"&gt;季節限定&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/a&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- PRODUCT CARDS --&gt;</p>
+<p class="p1">&lt;div class="product-cards" style="margin-top: 32px;"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="pcard" id="yukari"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="pcard-img" style="background: linear-gradient(135deg, #e8d5b0, #c8a96a);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- To add photo: replace div content with &lt;img src="yukari.jpg" alt="Yukari"&gt; --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>🍤</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="img-placeholder-label"&gt;Photo coming soon&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="pcard-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="tag"&gt;Signature&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h3&gt;Yukari — Original Prawn Cracker&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="h3-ja"&gt;〈ゆかり〉&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Bankaku's flagship product, crafted since 1889. Each cracker is made with approximately</p>
+<p class="p1"><span class="Apple-converted-space">        </span>70% natural prawn, slow-dried and baked using a traditional technique passed down</p>
+<p class="p1"><span class="Apple-converted-space">        </span>from the Edo period. Crisp, fragrant, and deeply savoury — a timeless taste</p>
+<p class="p1"><span class="Apple-converted-space">        </span>that has delighted generations across Japan and beyond.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="pcard" id="sakusaku"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="pcard-img" style="background: linear-gradient(135deg, #f0e8d8, #d4b896);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>🍪</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="img-placeholder-label"&gt;Photo coming soon&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="pcard-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="tag"&gt;Everyday Favourite&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h3&gt;Saku Saku Nikki&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="h3-ja"&gt;〈さくさく日記〉&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"Saku Saku" — the Japanese word for that satisfying crisp crunch. Thinner and lighter</p>
+<p class="p1"><span class="Apple-converted-space">        </span>than the classic Yukari, these bite-sized crackers are perfect for everyday snacking.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Comes in cheerful, gift-friendly packaging that brings a smile with every box.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="pcard" id="yaraku"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="pcard-img" style="background: linear-gradient(135deg, #1a3a5c, #2d6a9f);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>🎴</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="img-placeholder-label"&gt;Photo coming soon&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="pcard-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="tag gold"&gt;Premium Collection&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h3&gt;Yaraku — Eight Flavours&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="h3-ja"&gt;〈八樂〉&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>A celebration of nature's eight gifts. Each assortment brings together eight distinct</p>
+<p class="p1"><span class="Apple-converted-space">        </span>flavours and shapes — from the classic whole prawn to fragrant nori seaweed.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Beautifully presented, 〈YARAKU〉 is a favourite choice for gifting and special occasions.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="pcard" id="seasonal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="pcard-img" style="background: linear-gradient(135deg, #6a4c8a, #9b6abf);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>🎁</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="img-placeholder-label"&gt;Photo coming soon&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="pcard-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="tag seasonal-tag"&gt;Seasonal Specials&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h3&gt;Seasonal Specials&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="h3-ja"&gt;〈季節限定〉&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Thoughtfully curated for special occasions throughout the year —</p>
+<p class="p1"><span class="Apple-converted-space">        </span>from festive Christmas hampers to celebratory gift sets.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Each seasonal collection is available for a limited time only.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- SEASONAL NOTICE --&gt;</p>
+<p class="p1">&lt;div class="seasonal-notice"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sn-icon"&gt;🗓️&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h4&gt;Next Seasonal Collection&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Our Christmas hampers and festive gift sets will be available from &lt;strong&gt;November 2025&lt;/strong&gt;.&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Follow us on Instagram &amp;amp; Facebook to be the first to know!</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/p&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- SHOP ONLINE --&gt;</p>
+<p class="p1">&lt;div id="shop-online"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section-title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Shop Online&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="ja"&gt;オンライン購入&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="shop-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="shop-intro"&gt;Can't visit us in-store? Shop Bankaku products through our authorised online retailers.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="shop-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a class="shop-btn priority" href="https://www.takashimaya.com.sg/productlist/brand/bankaku" target="_blank"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="shop-icon"&gt;🛍️&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="shop-name"&gt;Takashimaya&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="shop-label"&gt;Online Store&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a class="shop-btn" href="https://www.krisshop.com/en/brands/all-brands/bankaku" target="_blank"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="shop-icon"&gt;✈️&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="shop-name"&gt;KrisShop&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="shop-label"&gt;Singapore Airlines&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a class="shop-btn" href="http://www.lazada.sg/jk-online" target="_blank"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="shop-icon"&gt;🟠&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="shop-name"&gt;Lazada&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="shop-label"&gt;JK Online&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a class="shop-btn" href="https://shopee.sg/jkonline_sg" target="_blank"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="shop-icon"&gt;🛒&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="shop-name"&gt;Shopee&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="shop-label"&gt;JK Online SG&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ABOUT --&gt;</p>
+<p class="p1">&lt;div id="about" class="about-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="en-heading"&gt;Connecting Hearts,&lt;br&gt;Bridging Bonds&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="ja-heading"&gt;坂角総本舗について&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="gold-line"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Founded in 1889 in Yokosuka, Aichi Prefecture, BANKAKU has spent over 130 years</p>
+<p class="p1"><span class="Apple-converted-space">    </span>crafting prawn crackers that honour the natural gifts of the sea.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Our flagship 〈YUKARI〉 traces its roots to the Edo era, when prawn delicacies</p>
+<p class="p1"><span class="Apple-converted-space">    </span>were presented to the Tokugawa Shogunate.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Today, we bring that same tradition and heartfelt craftsmanship to Singapore.</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="gold-line"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="year-badge"&gt;Est. 1889 · Nagoya, Japan&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- WHERE TO FIND US --&gt;</p>
+<p class="p1">&lt;div id="where"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section-title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Where to Find Us&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="ja"&gt;取 扱 店&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="where-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="store-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h4&gt;Takashimaya Shopping Centre&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="info-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="info-icon"&gt;📍&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;391 Orchard Road, B2 07-1-1, Singapore 238872&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="info-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="info-icon"&gt;🕐&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;Daily: 10:00am – 9:30pm&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="font-size:11px; color:#aaa; text-align:center; padding-top: 4px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Also available online via Takashimaya, KrisShop, Lazada &amp;amp; Shopee</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- CONTACT --&gt;</p>
+<p class="p1">&lt;div id="contact" class="contact-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section-title" style="padding-top: 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Contact Us&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="ja"&gt;お 問 合 せ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="contact-details"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;strong&gt;BANKAKU Singapore&lt;/strong&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>For product enquiries, corporate gifting &amp;amp; wholesale:&lt;br&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>📧 &lt;a href="mailto:info@bankaku.com.sg"&gt;info@bankaku.com.sg&lt;/a&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>📞 WhatsApp / Call: &lt;a href="https://wa.me/6564827179"&gt;+65 6482 7179&lt;/a&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>🕐 Mon – Fri &amp;nbsp;|&amp;nbsp; 10:00am – 6:00pm</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="contact-btns"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="mailto:info@bankaku.com.sg" class="contact-btn"&gt;Send an Enquiry&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="https://wa.me/6564827179" class="contact-btn whatsapp"&gt;💬 WhatsApp Us&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- FOOTER --&gt;</p>
+<p class="p1">&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="footer-brand"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img src="data:image/jpeg" alt="Bankaku"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-brand-name"&gt;BANKAKU · 坂角総本舗&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-brand-sub"&gt;Official Singapore Representative&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="footer-sections"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h5&gt;Products&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#yukari"&gt;Yukari 〈ゆかり〉&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#sakusaku"&gt;Saku Saku Nikki 〈さくさく日記〉&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#yaraku"&gt;Yaraku 〈八樂〉&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#seasonal"&gt;Seasonal Specials&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h5&gt;Shop Online&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://www.takashimaya.com.sg/productlist/brand/bankaku" target="_blank"&gt;Takashimaya Online&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://www.krisshop.com/en/brands/all-brands/bankaku" target="_blank"&gt;KrisShop&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="http://www.lazada.sg/jk-online" target="_blank"&gt;Lazada&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://shopee.sg/jkonline_sg" target="_blank"&gt;Shopee&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h5&gt;Info&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#about"&gt;About Bankaku&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#where"&gt;Store Location&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#contact"&gt;Contact Us&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://www.bankaku.co.jp" target="_blank"&gt;Japan Official Site ↗&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="social-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a class="social-btn" href="https://www.facebook.com/BankakuSingapore" target="_blank" title="Facebook"&gt;f&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a class="social-btn" href="https://www.instagram.com/bankaku_sg/" target="_blank" title="Instagram" style="font-size:12px; font-family:sans-serif;"&gt;ig&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="copyright"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>© BANKAKU Co., Ltd. · Singapore · All Rights Reserved&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>info@bankaku.com.sg &amp;nbsp;|&amp;nbsp; +65 6482 7179</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;a class="back-top" href="#" title="Back to top"&gt;↑&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function toggleMenu() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const nav = document.getElementById('mobileNav');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function closeMenu() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('mobileNav').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('a[href^="#"]').forEach(a =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>a.addEventListener('click', e =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const id = a.getAttribute('href');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (id === '#') return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const target = document.querySelector(id);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
