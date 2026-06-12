@@ -101,12 +101,12 @@
   .shop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .shop-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; background: white; border: 1px solid #ddd; padding: 16px 10px; text-decoration: none; color: var(--dark); text-align: center; transition: border-color 0.3s, box-shadow 0.3s; gap: 5px; position: relative; }
   .shop-btn:hover { border-color: var(--coral); box-shadow: 0 2px 8px rgba(224,90,78,0.1); }
-  .shop-btn .shop-icon { font-size: 22px; }
+  .shop-btn .shop-icon { font-size: 20px; }
   .shop-btn .shop-name { font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 600; color: var(--dark); }
   .shop-btn .shop-label { font-size: 10px; color: var(--muted); letter-spacing: 0.05em; }
   .shop-btn.priority { border-color: var(--coral); }
   .shop-btn.priority::before { content: '★ Recommended'; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--coral); color: white; font-size: 9px; padding: 2px 8px; letter-spacing: 0.06em; white-space: nowrap; font-family: 'Cormorant Garamond', serif; }
-  .shop-icon-img { width: 20px; height: auto; display: block; margin: 0 auto 6px; object-fit: contain; }
+  .shop-icon-img { width: auto; max-width: 60px; height: 50px; display: block; margin: 0 auto 6px; object-fit: contain; }
 
   /* ABOUT */
   .about-section { background: var(--charcoal); color: white; padding: 52px 28px; text-align: center; position: relative; overflow: hidden; }
