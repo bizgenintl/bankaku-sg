@@ -60,20 +60,22 @@
   .divider { width: 32px; height: 1px; background: var(--coral); margin: 10px auto 0; }
 
   /* PRODUCT CATEGORIES GRID */
-  .cat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin-bottom: 3px; }
-  .product-cell { position: relative; overflow: hidden; cursor: pointer; display: block; text-decoration: none; }
-  .product-cell-placeholder { width: 100%; height: 185px; display: flex; align-items: center; justify-content: center; font-size: 52px; transition: transform 0.4s; }
-  .product-cell:hover .product-cell-placeholder { transform: scale(1.05); }
+  .cat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding:0 20px 40px; }
+  .cat-item { display: flex; flex-direction: column; }
+  .product-cell { width: 100%; overflow: hidden; cursor: pointer; display: block; text-decoration: none; aspect ratio: 1 / 1; }
+  .cell-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
 
   /* IMAGE slot for when real photos are added */
-  .product-cell .cell-img { width: 100%; height: 185px; object-fit: cover; display: block; transition: transform 0.4s; }
-  .product-cell:hover .cell-img { transform: scale(1.05); }
+  .product-cell:hover .cell-img { transform: scale(1.03); }
+                 
+  /* Labels – outside the image, bottom-left aligned */
+  .product-cell-label { margin-top: 8px; text-align: left; }
+  .product-cell-label .en-name { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 500; color: var(--dark); display: inline-block; margin-right: 12px; }
+  .product-cell-label .ja-name { font-family: 'Noto Serif JP', serif; font-size: 11px; color: var(--muted); display: inline-block; }
 
-  .product-cell-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.72), transparent); color: white; padding: 32px 14px 14px; }
-  .product-cell-label .en-name { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 400; display: block; margin-bottom: 2px; letter-spacing: 0.05em; }
-  .product-cell-label .ja-name { font-family: 'Noto Serif JP', serif; font-size: 10px; letter-spacing: 0.12em; color: rgba(255,255,255,0.72); display: block; }
-  .seasonal-badge { position: absolute; top: 12px; right: 12px; background: var(--gold); color: white; font-size: 9px; letter-spacing: 0.1em; padding: 3px 10px; text-transform: uppercase; font-family: 'Cormorant Garamond', serif; }
-
+ /* Remove old absolute positioning styles */
+  .product-cell-label { position: static; background: none; padding: 0; }
+                 
   /* PRODUCT DETAIL CARDS */
   .product-cards { padding: 0 20px 36px; display: flex; flex-direction: column; gap: 28px; }
   .pcard { background: var(--offwhite); }
@@ -219,43 +221,49 @@
 </div>
 
 <div class="cat-grid">
-  <a class="product-cell" href="#yukari">
-    <img class="cell-img" src="images/yuk2-cat.jpg" alt="Yukari">
-  </a>
+<!-- Yukari -->
+    <div class="cat-item">
+        <a class="product-cell" href="#yukari">
+            <img class="cell-img" src="images/yuk2-cat.jpg" alt="Yukari">
+        </a>
+        <div class="product-cell-label">
+            <span class="en-name">Yukari</span>
+            <span class="ja-name">ゆかり</span>
+        </div>
     </div>
-    <div class="product-cell-label">
-      <span class="en-name">Yukari</span>
-      <span class="ja-name">ゆかり</span>
+
+    <!-- Saku Saku Nikki -->
+    <div class="cat-item">
+        <a class="product-cell" href="#sakusaku">
+            <img class="cell-img" src="images/ssnikk1-cat.jpg" alt="Saku Saku Nikki">
+        </a>
+        <div class="product-cell-label">
+            <span class="en-name">Saku Saku Nikki</span>
+            <span class="ja-name">さくさく日記</span>
+        </div>
     </div>
-  </a>
-  <a class="product-cell" href="#sakusaku">
-    <img class="cell-img" src="images/ssnikki4-cat.jpg" alt="Saku Saku Nikki">
-  </a>
+
+    <!-- Yaraku -->
+    <div class="cat-item">
+        <a class="product-cell" href="#yaraku">
+            <img class="cell-img" src="images/yar4-cat.jpg" alt="Yaraku">
+        </a>
+        <div class="product-cell-label">
+            <span class="en-name">Yaraku</span>
+            <span class="ja-name">八楽</span>
+        </div>
     </div>
-    <div class="product-cell-label">
-      <span class="en-name">Saku Saku Nikki</span>
-      <span class="ja-name">さくさく日記</span>
+
+    <!-- Seasonal Specials -->
+    <div class="cat-item">
+        <a class="product-cell" href="#seasonal">
+            <img class="cell-img" src="images/yuk-g1-cat.jpg" alt="Seasonal Specials">
+        </a>
+        <div class="product-cell-label">
+            <span class="en-name">Seasonal Specials</span>
+            <span class="ja-name">季節限定</span>
+        </div>
     </div>
-  </a>
-  <a class="product-cell" href="#yaraku">
-    <img class="cell-img" src="images/yar4-cat.jpg" alt="Yaraku">
-  </a>
-    </div>
-    <div class="product-cell-label">
-      <span class="en-name">Yaraku</span>
-      <span class="ja-name">八樂</span>
-    </div>
-  </a>
-  <a class="product-cell" href="#seasonal">
-    <img class="cell-img" src="images/yuk-g1-cat.jpg" alt="Seasonal Specials">
-  </a>
-    </div>
-    <div class="seasonal-badge">Limited</div>
-    <div class="product-cell-label">
-      <span class="en-name">Seasonal Specials</span>
-      <span class="ja-name">季節限定</span>
-    </div>
-  </a>
 </div>
 
 <!-- PRODUCT CARDS -->
