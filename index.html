@@ -45,7 +45,7 @@
 
   /* HERO CAROUSEL */
   .hero-carousel { position: relative; width: 100%; overflow: hidden; }
-  .carousel-slides { position: relative; width: 100%; min-height: 500px; }
+  .carousel-slides { position: relative; width: 100%; height: 500px; }
   .carousel-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; transition: opacity 0.6s ease; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 64px 32px; box-sizing: border-box; background-color: #1a2a3a; }/* fallback while loading */ 
   .carousel-slide.active { opacity: 1; position: relative; }
 
@@ -69,8 +69,9 @@
 
 /* Mobile adjustment for shorter height */
   @media (max-width: 768px) {
-    .carousel-slides { min-height: 480px; }
+    .carousel-slides { height: 480px; }
     .carousel-slide h1 { font-size: 28px; }
+    .carousel-slide p { font-size: 12px; max-width: 260px; }
 }
 
   /* SECTION TITLE */
@@ -227,11 +228,11 @@
             <a href="#products" class="btn-outline">Discover Our Products</a>
         </div>
         <!-- Slide 2 -->
-        <div class="carousel-slide" style="background-image: url('images/ssnikki1-ban.jpg');">
-            <div class="ja">季節限定 · Seasonal Specials</div>
-            <h1>Christmas Hampers<br>Coming Mid‑November</h1>
-            <p>Festive gift sets available for a limited time. Follow us on Instagram &amp; Facebook to be the first to know.</p>
-            <a href="#seasonal" class="btn-outline">Learn More</a>
+        <div class="carousel-slide" style="background-image: url('images/banner2.jpg');">
+            <div class="ja">さくさく日記 · Everyday Favourite</div>
+            <h1>Saku Saku Nikki<br>Everyday Crunch</h1>
+            <p>Thinner and lighter than the classic Yukari, these bite‑sized crackers are perfect for everyday snacking. Comes in cheerful, gift‑friendly packaging.</p>
+            <a href="#sakusaku" class="btn-outline">Discover More</a>
         </div>
         <!-- Slide 3 -->
         <div class="carousel-slide" style="background-image: url('images/yar1-banner.jpeg');">
